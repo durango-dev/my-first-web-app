@@ -12,4 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
         currentColorIndex = (currentColorIndex + 1) % colors.length;
         body.style.backgroundColor = colors[currentColorIndex];
     });
+
+    const counterButton = document.getElementById('counterButton');
+
+    let count = 0;
+
+    counterButton.addEventListener('click', () => {
+        count++;
+        counterButton.textContent = `Count: ${count}`;
+});
 });
